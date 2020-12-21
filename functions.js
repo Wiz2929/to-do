@@ -5,10 +5,11 @@ function setItem(name,value){
   }
   localStorage.setItem(name,JSON.stringify(value));
 }
-function getItem(name,value){
+function getItem(name){
+  let value = "Value";
   if(name.length < 1 || value.length < 1 || name == undefined || value == undefined || name == null || value == null){
     console.log("error Falied To GetItem || Input proper name and value");
     return ;
   }
-  return JSON.parse(localStorage.getItem(name,value));
+  return JSON.parse(localStorage.getItem(name));
 }
